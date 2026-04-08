@@ -1,0 +1,50 @@
+<?php
+
+return [
+    'accounts' => [
+        'tagir' => [
+            'name' => 'Tagir',
+            'email' => env('TAGIR_EMAIL', 'tagir@personal-messenger.local'),
+            'secret_code' => env('TAGIR_SECRET_CODE', 'tagir-secret-code'),
+        ],
+        'suri' => [
+            'name' => 'Suri',
+            'email' => env('SURI_EMAIL', 'suri@personal-messenger.local'),
+            'secret_code' => env('SURI_SECRET_CODE', 'suri-secret-code'),
+        ],
+    ],
+    'media_disk' => env('CHAT_MEDIA_DISK', 'public'),
+    'media_directory' => env('CHAT_MEDIA_DIRECTORY', 'chat-media'),
+    'avatar_disk' => env('CHAT_AVATAR_DISK', 'public'),
+    'avatar_directory' => env('CHAT_AVATAR_DIRECTORY', 'avatars'),
+    'allowed_mime_types' => [
+        'image/jpeg',
+        'image/png',
+        'image/webp',
+        'image/gif',
+        'image/heic',
+        'image/heif',
+        'video/mp4',
+        'video/quicktime',
+        'video/webm',
+        'video/x-msvideo',
+        'video/x-matroska',
+        'audio/webm',
+        'audio/ogg',
+        'audio/mp4',
+        'audio/mpeg',
+        'audio/aac',
+        'audio/wav',
+    ],
+    'max_upload_size_kb' => (int) env('CHAT_MAX_UPLOAD_SIZE_KB', 102400),
+    'avatar_allowed_mime_types' => [
+        'image/jpeg',
+        'image/png',
+        'image/webp',
+        'image/heic',
+        'image/heif',
+    ],
+    'avatar_max_upload_size_kb' => (int) env('CHAT_AVATAR_MAX_UPLOAD_SIZE_KB', 10240),
+    'typing_ttl_seconds' => (int) env('CHAT_TYPING_TTL_SECONDS', 8),
+    'draft_ttl_seconds' => (int) env('CHAT_DRAFT_TTL_SECONDS', 20),
+];
